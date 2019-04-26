@@ -1,0 +1,27 @@
+import java.util.Scanner;
+/**
+ * Developed by: Jose Miguel Reyes
+ * Date: 4/26/2019
+ * This class is meant to replicate the execution of
+ * Euclid's Algorithm for finding the Greates Common Divisor
+ * from two given ints
+ * */
+public class Euclid{
+  public static void main(String[] args){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("Enter the first number:");
+    int a = keyboard.nextInt();
+    System.out.println("Enter the second number:");
+    int b = keyboard.nextInt();
+    
+    if(b != 0){
+      do{
+        if(a > b)
+          a -= b;
+        else 
+          b -= a;
+      }while(b != 0);
+    }
+    System.out.println("The GCD is: " +a);
+  }
+}
